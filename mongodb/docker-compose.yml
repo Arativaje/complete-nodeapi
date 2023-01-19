@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  mongodb:
+    image: 'mongo'
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    logging:
+            options:
+                max-size: 1g
+    volumes:
+      - 'mongodb_data2:/data/db'
+      # - ./mongo-entrypoint/:/docker-entrypoint-initdb.d/
+      # - ./server/mongo/init/:/docker-entrypoint-initdb.d/
+      # - ./server/mongo/config:/data/configdb
+    # environment:
+      # - MONGO_INITDB_ROOT_USERNAME=arati
+      # - MONGO_INITDB_ROOT_PASSWORD=arati
+      # - SAM_USER=sandip
+      # - SAM_PASSWORD=sandip123
+volumes:
+  mongodb_data2:

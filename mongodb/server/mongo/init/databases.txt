@@ -1,0 +1,7 @@
+# Format is:
+# database-name   username   password 
+# Username and password are optional.
+sandip_core
+sandip_demo
+db
+test sandip sandip
