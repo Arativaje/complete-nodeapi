@@ -3,8 +3,13 @@ const { default: mongoose } = require("mongoose");
 var userSchema = mongoose.Schema(
     {
         name: String,
-        email: String,
+        email: {
+            type:String, 
+            unique:true,
+            require:true
+        },
         pwd: String,
+        userType:String,
         createdDate:"date",
         updatedDate:"date"
     },
